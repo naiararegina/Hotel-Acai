@@ -1,0 +1,21 @@
+.container{
+	background-color: pink;
+	height: 500px;
+	display: flex;
+	flex-direction: row; /*define a direção dos itens row = linha row-reverse = linha da direita p/ esquerda column = coluna e column-reverse */
+    flex-wrap: wrap;/*quebra de linha ou não, nowrap-reverse; nowrap = não quebra wrap = quebra*/
+    /*flex-flow: row wrap-reverse;*/
+    justify-content:flex-start; /*flex-start center. space-between space-around=espaçamento iguIA*/
+    align-items:stretch; /*baseline = alinha o conteudo flex-end, center; */
+    align-content:stretch;  /*space-around ... alinhamento vertical na quebra*/
+}
+
+
+.item {
+	background-color: black;
+	color: #fff;
+	padding: 20px;
+	margin: 5px;
+	width: 200px;
+
+}
