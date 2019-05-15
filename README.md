@@ -1,2 +1,2 @@
 # Hotel-Acai
-Projeto pessoal
+Projeto criado no curso de Flexbox
