@@ -1,0 +1,312 @@
+/*RESET*/
+*{
+	margin: 0; 
+	padding: 0; 
+	font-size: 100%; 
+	box-sizing: border-box; 
+	font-family: 'Roboto Slab', serif;
+}
+
+nav, ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none; 
+	cursor: pointer; 
+	opacity: 0.9; 
+}
+
+a:hover {
+	opacity: 1;
+}
+
+/* HEADER*/
+
+header {
+	background-color:rgba(200, 161, 139, 0.7);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;/*espaçamento entre os itens*/
+	align-items: center;
+	padding: 20px 50px;
+}
+header img {
+	width: 50px;
+}
+header nav {
+	display: flex;/*display fica em linha*/
+}
+header li a {
+	color:#000000;
+}
+header li {
+	margin: 0 20px;/*margin dos itens da lista*/
+}
+header li:first-child {/*li:first-child seleciona o primeiro filho da lista*/
+	margin-left: 0;
+}
+header li:last-child {/*li:last-child seleciona o ultimo filho da lista*/
+	margin-right: 0;
+}
+
+@media (max-width: 700px){
+	header {
+		flex-direction: column;/*menu pula para baixo quando diminuir a tela*/
+	}
+
+	header{
+		margin-bottom: 15px;
+	}
+}
+
+/*hero*/
+.hero {
+	background-image: url(../img/brag-06.jpg);
+	background-size: cover;
+	min-height: 100vh;/*é unidae relativa =100%*/
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;/*renderiza em linhas os iten h li*/
+	text-align: center;
+}
+.hero h1 {
+	font-size: 3.2rem;
+	margin-bottom: 15px;
+}
+.hero h3 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+.hero .btn{
+	background-color:#fff;
+	border-radius: 9px;
+	color: #191c03;
+	padding: 15px 30px;
+	text-transform: uppercase;
+}
+
+@media (max-width: 700px){/*quando diminuir a tela*/
+	.hero h1 {
+		font-size: 2.5rem;
+	}
+
+	.hero h3 {
+		font-size: 1.5rem;
+	}
+	.hero .btn {
+		font-size: 0.7rem;
+	}
+}
+
+
+/*CONHEÇA O HOTEL*/
+.conheca-o-hotel {
+	background-color: #F9ECD1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 50px;
+
+}
+
+.conheca-o-hotel h3 {
+	font-size: 2rem;
+	margin-bottom: 35px;
+	color: #191c03;
+	text-align: center;
+}
+
+.conheca-o-hotel p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	color: #191c03;
+	text-align: center;
+}
+
+.conheca-o-hotel hr {
+	width: 200px;
+	height: 2px;
+	background-color: #191c03;
+    margin-bottom: 70px;
+    border:none;
+}
+
+.conheca-o-hotel .grid {
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;/*permitir a quebra de linha*/
+}
+
+.conheca-o-hotel .grid li {
+	height: 350px;
+	padding: 20px;
+	border-radius: 4px;
+	background-clip: content-box;/*????*/
+	background-size: cover;
+	background-position: center;/*tds back do LI vão ocupar o espaço no li centralizado*/
+}
+
+.conheca-o-hotel .grid li.small {
+	flex-basis: 40%;
+}
+
+.conheca-o-hotel .grid li.large {
+	flex-basis: 60%;
+}
+
+@media (max-width: 700px){/*quando diminuir a tela*/
+	.conheca-o-hotel .grid li.small, .conheca-o-hotel .grid li.large {
+		flex-basis:100%;
+		  }
+}
+
+/*CARACTERISTICAS*/
+.caracteristicas {
+	background-color:#2B1606;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 50px;
+
+}
+
+.caracteristicas h3 {
+	font-size: 2rem;
+	margin-bottom: 35px;
+	text-align: center;
+	color: #fff;
+}
+
+.caracteristicas p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	color: #fff;
+	text-align: center;
+}
+
+.caracteristicas hr {
+	width: 200px;
+	height: 2px;
+	background-color: #fff;
+    margin-bottom: 70px;
+    border:none;
+}
+.caracteristicas .grid {
+    width: 100%;
+    display: flex;
+}
+.caracteristicas .grid li {
+    padding: 0 30px;
+    text-align: center;
+}
+.caracteristicas .grid li i {
+    color: #c3c63b;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+.caracteristicas .grid li h4 {
+   font-size: 1.5rem;
+   color: #E6EB33;
+   margin-bottom: 30px;
+}
+.caracteristicas .grid li p {
+   color: #fff;
+}
+@media (max-width: 850px){/*quando diminuir a tela*/
+	.caracteristicas .grid {
+		flex-direction: column;
+	}
+}
+
+/*NEWLETTER*/
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 50px;
+}
+.newsletter h3 {
+	font-size: 2rem;
+	margin-bottom: 35px;
+	text-align: center;
+	color: #E6EB33;
+}
+
+.newsletter p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	color: #E6EB33;
+	text-align: center;
+}
+
+.newsletter hr {
+	width: 200px;
+	height: 2px;
+	background-color: #E6EB33;
+    margin-bottom: 70px;
+    border:none;
+}
+.newsletter form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 80%;
+	max-width: 800px;
+}
+.newsletter input {
+	padding: 15px;
+	border:1px solid #E6EB33;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex: 1;
+}
+.newsletter button {
+	padding: 15px;
+	background-color:#E6EB33;
+    color:  #2B1606;
+    text-transform: uppercase;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media (max-width: 700px){/*quando diminuir a tela*/
+	.newsletter input {
+		flex-basis:100%;
+		margin-bottom: 15px;
+	}
+}
+
+/*FOOTER*/
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: #2B1606;
+	padding: 40px 0;
+	align-items: center;
+}
+footer ul {
+	display: flex;
+	margin-bottom: 25px;
+}
+footer ul li{
+	margin-right: 10px;
+}
+footer ul li:last-child{
+	margin-right: 0;
+}
+footer ul li a{
+	color: #E6EB33;
+	font-size: 2rem;
+}
+footer p{
+	color: #E6EB33;
+	text-align: center;
+}
+
